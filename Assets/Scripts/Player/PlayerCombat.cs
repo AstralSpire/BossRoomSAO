@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
 {
-    [SerializeField] private float swingRate = .5f;
+    [SerializeField] private float swingRate = .3f;
     private bool canSwing = true;
 
     [SerializeField] private Animator playerAnimator;
-    [SerializeField] private Camera playerCamera;
     [SerializeField] private AudioSource swingSFX;
     [SerializeField] private Collider swordHitbox;
 
@@ -45,7 +44,7 @@ public class PlayerCombat : MonoBehaviour
         //swing and wait for anim to pass
         canSwing = false;
 
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(1.5f);
 
         //re disable the hitbox
         if(swordHitbox != null)

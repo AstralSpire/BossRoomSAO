@@ -646,7 +646,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swingRate: 0.5
   playerAnimator: {fileID: 1792336456}
-  playerCamera: {fileID: 1532078032}
   swingSFX: {fileID: 0}
   swordHitbox: {fileID: 0}
 --- !u!1 &522542293
@@ -911,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 6423357387833123254, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
       propertyPath: m_Avatar
       value: 
-      objectReference: {fileID: 9000000, guid: e9edf394f86a2984d99e9263676677db, type: 3}
+      objectReference: {fileID: 9000000, guid: e150d045405aa3443bbe877676462987, type: 3}
     - target: {fileID: 6841505210967184585, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
       propertyPath: Jumpforce
       value: 10
@@ -2466,11 +2465,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!20 &1532078032 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 1215507448831670964, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
-  m_PrefabInstance: {fileID: 719926591}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1557525618
 GameObject:
   m_ObjectHideFlags: 0
