@@ -627,6 +627,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420638015}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &506636753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4403046662379448103, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+  m_PrefabInstance: {fileID: 719926591}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &506636757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506636753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30d6f9fe693b39428c948a2e280fced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingRate: 0.5
+  playerAnimator: {fileID: 1792336456}
+  playerCamera: {fileID: 1532078032}
+  swingSFX: {fileID: 0}
+  swordHitbox: {fileID: 0}
 --- !u!1 &522542293
 GameObject:
   m_ObjectHideFlags: 0
@@ -886,10 +908,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6423357387833123254, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: e9edf394f86a2984d99e9263676677db, type: 3}
     - target: {fileID: 6841505210967184585, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
       propertyPath: Jumpforce
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6841505210967184585, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 1792336456}
     - target: {fileID: 8249306800366274097, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.9298825
@@ -933,7 +963,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4403046662379448103, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 506636757}
   m_SourcePrefab: {fileID: 100100000, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
 --- !u!1 &857943005
 GameObject:
@@ -2433,6 +2466,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!20 &1532078032 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1215507448831670964, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+  m_PrefabInstance: {fileID: 719926591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1557525618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3076,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753313926}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &1792336456 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6423357387833123254, guid: b6dc0800b8d43a845b1fe1238dad27dd, type: 3}
+  m_PrefabInstance: {fileID: 719926591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1858558990
 GameObject:
   m_ObjectHideFlags: 0

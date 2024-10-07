@@ -11,11 +11,14 @@ public class PlayerFPS : MonoBehaviour
 
     [SerializeField] private Transform PlayerCamera;
     [SerializeField] private CharacterController Controller;
+    [SerializeField] private Animator playerAnimator;
     [Space]
     [SerializeField] private float Speed;
     [SerializeField] private float Jumpforce;
     [SerializeField] private float Sensitivity;
     private float Gravity = 9.81f;
+
+
 
     private void Start()
     {
@@ -35,6 +38,14 @@ public class PlayerFPS : MonoBehaviour
     {
         Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput);
 
+        if (MoveVector != Vector3.zero)
+        {
+            playerAnimator.SetBool("Idle", false);
+        }
+        else
+        {
+            playerAnimator.SetBool("Idle", true);
+        }
 
         if (Controller.isGrounded)
         {

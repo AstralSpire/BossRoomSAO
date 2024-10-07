@@ -7,17 +7,27 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private float swingRate = .5f;
     private bool canSwing = true;
 
-    [SerializeField] private Animator swordAnimator;
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private AudioSource swingSFX;
     [SerializeField] private Collider swordHitbox;
 
 
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0) && canSwing)
+        {
+            StartCoroutine(swordSwingcrt());
+        }
+    }
+
     IEnumerator swordSwingcrt()
     {
-        if(swordAnimator != null)
+        Debug.Log("Player Anim is: " + playerAnimator);
+        if (playerAnimator != null)
         {
-            swordAnimator.SetTrigger("SwingAnim");
+            playerAnimator.SetTrigger("Attacking");
+            Debug.Log("Attacking");
         }
 
         if(swingSFX != null)
